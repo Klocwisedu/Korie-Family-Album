@@ -1,0 +1,156 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Toggle Button */
+#toggle-btn {
+    position: fixed;
+    top: 30px;
+    left: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    height: 100%;
+    padding: 15px;
+    transition: width 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+}
+
+
+.sidebar.collapsed {
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Sidebar List Styles */
+.sidebar ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    line-height: 1.8rem;
+}
+
+.sidebar ul li:hover {
+    margin: 15px 0;
+    background-color: #232323;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: none;
+}
+
+/* Search Bar Style */
+.search-bar-menu {
+    border-radius: 30px;
+    border: none;
+    padding: 10px 10px;
+    background-color: #232323;
+    color: white;
+    
+}
+
+.search-bar-menu::placeholder {
+    color: white;
+}
+
+.search-btn-menu {
+    border-radius: 20px;
+    border: none;
+    padding: 10px 85px;
+    justify-content: center;
+    margin-left: 35px;
+    background-color: #232323;
+    color: #fff;
+}
+
+.dash-add-btn {
+    margin-left: 565px;
+    padding: 10px 70px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.dash-add-btn:hover {
+          background-color: #000000;
+}
+/* Content adjustments */
+.header {
+    /* background-image: url(/images/happy-together-portrait-black-family-sofa-bonding-visit-quality-time-smile-group-african-parents-happy-270994912[1]-modified.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 20px;
+    background-color: #6f6f6f;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 50px;
+    text-align: center;
+    margin-top: 100px;
+    gap: 20px;
+  }
+
+.MemberDiv {
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.Member-Img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+#MaternalDiv {
+    display: grid;
+    gap: 25px;
+
+}
+
+#PaternalDiv {
+    display: grid;
+    gap: 25px;
+}
+
+#CustomDiv {
+    display: grid;
+    gap: 25px;
+}
+  
