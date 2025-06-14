@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -9,6 +12,8 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/extra.css">
+    <link rel="stylesheet" href="/style/media-query.css">
     <link rel="stylesheet" href="/style/style.css" />
     <title>Document</title>
   </head>
@@ -21,92 +26,151 @@
         <li><a href="Maternal-Side.html">View Maternal Side</a></li>
         <li><a href="Custom-side.html">View Custom Side</a></li>
         <li><a href="Add-New-Member.html">Add New Member</a></li>
+        <li><a href="print.html">Print FamilyAlbum</a></li>
         <input
         class="search-bar-menu"
         type="text"
         placeholder="Search Family Members.."
       />
     </div>
-    <div class="header" id="content">
-      <h1 style="justify-content: center; display: grid; font-size: 2.8rem; color: #ffffff;">
-         Korie's FamilyAlbum
-      </h1>
-      <p style="justify-content: center; display: grid; color: #ffffff; font-weight: 700;">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi dolorem
-        debitis sunt tempore veniam<br />voluptatum aspernatur laboriosam aut
-        repudiandae. Veritatis tenetur aut quisquam aliquam.
-      </p>
-      <button style="margin-top: 20px;" class="dash-add-btn" id="add-btn" onclick="window.location.href='Add-New-Member.html';">Add New Member</button>
-      <button style="margin-top: 30px; padding: 10px; border-radius: 20px; background-color: #333; border: none; color: #ffffff;" id="add-btn" onclick="window.location.href='sign-up-sign-in.html';">Sign in/Sign up</button>
+    <!--  -->
+      <button id="auth-btn"><i class="fa-solid fa-user" style="color: #ffffff;"></i></button>
+<button id="logout-btn" style="display: none;"><i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></button>
+
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <h1>Korie's FamilyAlbum</h1>
+        <p>Preserving memories and family connections.</p>
+      </div>
+      <div class="carousel-slide">
+        <h1>Capture Moments</h1>
+        <p>Keep your loved ones close through family stories.</p>
+      </div>
+      <div class="carousel-slide">
+        <h1>Share & Celebrate</h1>
+        <p>Stay connected with family anywhere, anytime.</p>
+      </div>
+      <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+      <button class="next-btn" onclick="nextSlide()">&#10095;</button>
     </div>
+<!--  -->
     
-    <div style="justify-content: center; display: grid; background-color: #333;">
-      <h2 style="color: #ffffff; font-size: 1.1rem;">"The apps combatting ‘sharenting’: The new tools to share family snaps may pave the way for better social media"</h2>
+    <div>
+    <div class="family-Album-h">
+      <h2>But Why This FamilyAlbum Site??</h2>
     </div>
+    <div class="why-section" style="grid-gap: 100px; display: flex; justify-content: center; margin-top: 20px; background-color: #f7f4f4; padding:20px;">
 
 
-
-    <div style="justify-content: center; display: grid;">
-      <h2 style="color: #333; ">But Why This FamilyAlbum Site??</h2>
-    </div>
-    <div style="grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap: 100px; display: flex; justify-content: center; display: flex; margin-top: 20px;">
-      <div style="padding: 20px 20px; background-color: #e9e9e9; border-radius: 10px; text-align: center;">
+      <div class="why-backgrund-color-media" style="padding: 20px 20px;  border-radius: 10px; text-align: center; ">
       <h2 style="">Functionability</h2>
-      <p>Lorem ipsum dolor sit amet<br>consectetur adipisicing elit.</p>
-      <img style="padding:0.5rem; background-color: #ffffff; border-radius: 10px;" src="/images/body-outline.svg" alt="">
+      <p>Korie's FamilyAlbum includes photo uploads, family trees, and memory sharing — all in one easy-to-use platform.</p>
+      <img style="height: 100px; padding: 0.5rem; border-radius: 10px;" src="/images/20181030_191916.jpg" alt="">
+
       </div>
 
-      <div style="padding: 20px; background-color: #e9e9e9; border-radius: 10px; text-align: center; ">
+      <div class="why-backgrund-color-media" style="padding: 20px;  border-radius: 10px; text-align: center; ">
         <h2>Easy Navigation</h2>
-        <p>Lorem ipsum dolor sit amet<br>consectetur adipisicing elit.</p>
-        <img style="padding:0.5rem; background-color: #ffffff; border-radius: 10px;" src="/images/bicycle-outline.svg" alt="">
+        <p>With a clean and simple layout, it's easy to explore photos, stories, and family connections with just a few clicks.
+</p>
+        <img style="height: 100px; padding: 0.5rem; border-radius: 10px;" src="/images/20180824_204206.jpg" alt="">
       </div>
 
-      <div style="padding: 20px; background-color: #e9e9e9; border-radius: 10px; text-align: center; ">
+      <div class="why-backgrund-color-media" style="padding: 20px;  border-radius: 10px; text-align: center; ">
         <h2>Eldery Friendly</h2>
-        <p>Lorem ipsum dolor sit amet<br>consectetur adipisicing elit.</p>
-        <img style="padding:0.5rem; border-radius: 10px; background-color: #ffffff;" src="/images/checkmark-done-outline.svg" alt="">
+        <p>Designed for all skill levels, Korie's FamilyAlbum is intuitive and clear, making it simple for anyone to get started.</p>
+        <img style="height: 100px; padding: 0.5rem; border-radius: 10px;" src="/images/20180824_112935_002.jpg" alt="">
       </div>
 
-      <div style="padding: 20px; background-color: #e9e9e9; border-radius: 10px; text-align: center;">
-        <h2>Customer Service</h2>
-        <p>Lorem ipsum dolor sit amet<br>consectetur adipisicing elit.</p>
-        <img style="width: 195px; border-radius: 10px; background-color: #ffffff;" src="/images/user-shield-alt-1-svgrepo-com.svg" alt="">
-      </div>
+      <div class="why-backgrund-color-media" style="padding: 20px;  border-radius: 10px; text-align: center;">
+        <h2>Private & Secure</h2>
+        <p>Your memories stay safe with strong privacy tools that let you choose who can view and share your family content.
 
+</p>
+        <img style="height: 100px; padding: 0.5rem;" src="/images/20180826_193747.jpg" alt="">
+      </div>
     </div>
-    
-    <div style="justify-content: center; display: grid; margin-top: 50px; background-color: #f7f4f4;">
+
+
+
+    <div class="Download-section">
+      <div class="download-div" style="max-width: 400px;">
+          <h1 class="download-h" style="font-size: 24px; margin: 0 0 10px;">Download Our Mobile App</h1>
+          <p class="download-p" style="line-height: 1.8rem; margin: 0 0 20px;">
+              User-Friendly Interface: Navigate effortlessly and organize your memories in a snap.
+              <br>Secure Sharing: Keep your content private while sharing safely with those who matter.<br>
+              Instant Access: Relive your favorite moments anytime, anywhere.
+          </p>
+
+          <div class="download-btn">
+          <a href="#"  style="display: inline-block; padding: 10px 20px; color: white; background-color: #333; text-decoration: none; border-radius: 5px; 
+          text-align: center;">Download Now</a>
+          </div>
+
+      </div>
+      <div style="max-width: 300px;">
+        <div class="phone-img">
+          <img  src="https://pngimg.com/uploads/iphone16/iphone16_PNG17.png" alt="Mobile App Preview">
+          </div>
+      </div>
+  </div>
+
+  <div class="About-us">
+    <h1>About Us</h1>
+   <p>The Korie Family Story
+
+The Korie family’s journey is deeply rooted in love, resilience, and shared aspirations. Basil Korie and his wife, Duruofor Obiageri Zita, both originate from the southeastern region of Nigeria—a land rich in culture, strong family values, and home to over 80 percent of the nation’s crude oil and gas reserves.
+
+Their union blossomed into a beautiful marriage, blessed with three handsome boys—each a living testament to their parents’ dedication, love, and strength.
+
+In 2011, Mr. Basil Korie made the bold decision to move to Canada in search of better opportunities and a brighter future for his young family. A year later, in 2012, his wife Obiageri Zita and their first son joined him, reuniting the family and beginning a new chapter in a foreign land.
+
+In 2014, the family relocated to the Northwest Territories, where they have since become a proud part of the northern community. After many years of hesitation, Mr. Korie eventually embraced Yellowknife as home—a decision that marked a turning point in their journey.
+
+Despite the challenges that come with migration and resettlement, the Korie family has remained a close-knit and loving unit, building a life rooted in purpose, unity, and hope. Their story is a powerful reminder of the strength of family and the dreams that connect hearts across continents.</p>
+</div>
+
+
+    <div style="justify-content: center; display: grid; margin-top: 50px;padding:20px;">
       <h1>Our Customers</h1>
     </div>
-    <div style="justify-content: center; display: flex;  text-align: center; line-height: 1.8rem; font-size: 0.9rem; padding: 10px;">
-      <div style="background-color: #e9e9e9;  width: 400px;">
-        <h2>Chimzigam</h2>
-        <p> this Family album app is the best thing that has happened to me 
-          and my<br>family and if there were any prizes for  the best app ever then this would be the one.</p>
+    <div class="customers-grid" style="justify-content: center; display: grid; grid-template-columns: 1fr 1fr 1fr ; text-align: center; line-height: 1.8rem; font-size: 0.9rem; padding: 50px;">
+      <div style="">
+        <h2>Dave</h2>
+        <p>"Korie's FamilyAlbum is amazing! I love going through all the memories and seeing our best moments together."</p>
       </div>
 
-      <div style="background-color: #e9e9e9;  width: 400px;">
-        <h2>Basil Korie</h2>
-        <p>Honestly whoever create this website is a certified  Mastermind and he or she deserves all the credit for all they did.</p>
+      <div style="">
+        <h2>Jake</h2>
+        <p>"I can’t get enough of Korie's FamilyAlbum! It makes reliving special family times easy and fun."</p>
       </div>
 
-      <div style="background-color: #e9e9e9;   width: 400px;">
-        <h2>Eliezer</h2>
-        <p>This is the greatest FamilyAlbum & Geneology app ever created.
-          And honestly i think everyone should respect and appreciate this masterpiece</p>
+      <div style="">
+        <h2>Marcus</h2>
+        <p>"Korie's FamilyAlbum captures every milestone perfectly! Looking back at all our shared memories is the best."</p>
       </div>
 
-      <div style="background-color: #e9e9e9;   width: 400px;">
-        <h2>Somtoo</h2>
-        <p>Huge thanks to the creator of this website and i hope they have a succesfull and wonderfull career
-         thanks<br>for everything and i wish you all the best and this is the best project i've ever seen</p>
+      <div style="">
+        <h2>John</h2>
+        <p>Whenever I scroll through Korie's FamilyAlbum, I feel so connected to my family. It’s truly special!"</p>
       </div>
+
+      <div style="">
+        <h2>Wiliam</h2>
+        <p> "Korie's FamilyAlbum keeps everything beautifully organized! I love seeing all our adventures in one place."</p>
+      </div>
+
+      <div style="">
+        <h2>Christian</h2>
+        <p>- "Korie's FamilyAlbum is incredible! Every picture tells a story, and I love flipping through them all."
+</p>
+      </div>
+
     </div>
     
 
     <footer>
-      <h1>Arbo FamilyAlbum</h1>
+      <h1>Korie's FamilyAlbum</h1>
       <p>Rights reserved 2024 &copy;</p>
   </footer>
   
@@ -124,5 +188,58 @@
   </style>
 
     <script src="/Javascript/humberger.js"></script>
+    <script src="/Javascript/sign-up-sign-in.js"></script>
+    <script>
+      let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-slide");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+    });
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+    showSlide(currentSlide);
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+    showSlide(currentSlide);
+}
+
+// Show the first slide initially
+showSlide(currentSlide);
+
+// Auto-slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+
+window.onload = function () {
+    let user = JSON.parse(localStorage.getItem('currentUser'));
+    
+    if (user) {
+        // Show welcome Toastify notification
+        Toastify({
+            text: `Welcome, ${user.fullName}!`,
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "black",
+        }).showToast();
+
+        // Show logout menu item and hide login menu item
+        document.getElementById('logout-menu-item').style.display = 'block';
+        document.getElementById('login-menu-item').style.display = 'none';
+    } else {
+        // Show login menu item and hide logout menu item
+        document.getElementById('logout-menu-item').style.display = 'none';
+        document.getElementById('login-menu-item').style.display = 'block';
+    }
+};
+
+
+    </script>
   </body>
 </html>

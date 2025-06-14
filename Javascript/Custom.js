@@ -120,9 +120,6 @@ function deleteCustomMember(index) {
 console.log(htmlCustom)
 CustomMembersDiv.innerHTML = htmlCustom;
 
-
-
-
-
-
-
+function refreshPage() {
+    location.reload(); // Reloads the current page
+}

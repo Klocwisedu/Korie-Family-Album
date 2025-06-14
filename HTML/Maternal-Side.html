@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="/style/Maternal-Side.css" />
     <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/maternal-media-query.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -30,7 +31,7 @@
         <li><a href="Paternal-Side.html">View Paternal Side</a></li>
         <li><a href="Custom-side.html">View Custom Side</a></li>
         <li><a href="Add-New-Member.html">Add New Member</a></li>
-        
+        <li><a href="print.html">Print FamilyAlbum</a></li>
       <input id="Search"
       class="search-bar-menu"
       type="text"
@@ -38,11 +39,12 @@
     />
       </ul>
     </div>
-    <div style="justify-content: center; display: grid">
-      <h1 style="font-size: 2.8rem; font-family: roboto; color: #000000">
+    <div class="header-container" style="justify-content: center; display: grid">
+      <h1 class="maternal-h1" style=" font-family: roboto; color: #000000">
         My Maternal Family
       </h1>
       <button onclick="window.location.href='Add-New-Member.html';" style="background-color: #252525; color: #fff; border-radius: 20px; padding: 10px; border: none;">Add New Member</button>
+      <button class="Reset-btn" onclick="refreshPage()">Clear Search</button>
     </div>
 
     <div id="SearchResults">
@@ -55,6 +57,7 @@
     <script src="/Javascript/humberger.js"></script>
     <!-- <script src="/Javascript/Add-New-Member.js"></script> -->
      <script src="/Javascript/Maternal.js"></script>
+     <script src="/Javascript/Search.js"></script>
 
   </body>
 </html>

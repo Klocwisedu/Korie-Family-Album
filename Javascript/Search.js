@@ -29,6 +29,7 @@ function DisplaySearch(Result) {
             <p><strong>First Name:</strong> ${item.firstName}</p>
             <p><strong>Last Name:</strong> ${item.lastName}</p>
             <p><strong>Side of Family:</strong> ${item.sideOfFamily}</p>
+            
             </div>
             `
 
@@ -41,10 +42,20 @@ function DisplaySearch(Result) {
 }
 const CustomSearchDiv = document.getElementById('CustomDiv')
 
-document.getElementById("Search").addEventListener("blur", (e) => {
-    const SearchTerms = e.target.value
-    if (SearchTerms !== '') {
-        searchItems(SearchTerms)
+document.getElementById("Search").addEventListener("keydown", (e) => {
+    // const SearchTerms = e.target.value
+    // if (SearchTerms !== '') {
+    //     searchItems(SearchTerms)
+    //     e.target.value = ''
+    //     CustomSearchDiv.style.display = 'none'
+    // } 
+    // else {
+    //     CustomSearchDiv.style.display = 'flex'
+    // }
+    if (e.key === "Enter"){
+         e.preventDefault()
+         const SearchTerms = e.target.value
+              searchItems(SearchTerms)
         e.target.value = ''
         CustomSearchDiv.style.display = 'none'
     } 
@@ -59,5 +70,9 @@ ResetBtn.addEventListener("click", () => {
     const GridContainer = document.getElementById("grid-container")
     GridContainer.style.display = 'none'
 })
+
+function refreshPage() {
+    location.reload();
+}
 
 

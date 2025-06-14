@@ -1,3 +1,4 @@
+/* Backup of original style.css before carousel text size changes */
 /* General styles */
 body {
     font-family: Arial, sans-serif;
@@ -15,7 +16,7 @@ body {
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 1100; /* Increased z-index to be above sidebar */
+    z-index: 1000;
 }
 
 /* Sidebar styles */
@@ -162,28 +163,6 @@ body, html {
     overflow-x: hidden;
 }
 
-.download-app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 20px;
-    background-color: #f7f4f4;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 120px auto;
-}
-
-.download-app > div:first-child {
-    max-width: 500px;
-    text-align: left;
-}
-
-.download-app > div:last-child img {
-    width: 220px;
-    border-radius: 10px;
-}
-
 .carousel-container {
     width: 100%;
     height: 400px;
@@ -195,7 +174,7 @@ body, html {
 .carousel-slide {
     width: 100%;
     height: 100%;
-    padding: 20px; /* Reduced from 40px */
+    padding: 40px;
     text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
@@ -204,16 +183,10 @@ body, html {
     display: none;
 }
 
-.carousel-slide h1, .carousel-slide p {
-    max-width: 100%;
-    word-wrap: break-word;
-    word-break: break-word;
-}
-
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: transléateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
@@ -241,7 +214,6 @@ body, html {
     height: 100vh;
     left: -300px; /* Sidebar starts hidden */
     transition: left 0.3s ease-in-out;
-    z-index: 1000; /* Ensure sidebar is below toggle button */
 }
 
 .sidebar.active {
@@ -278,75 +250,8 @@ body, html {
 }
 
 .carousel-slide:nth-child(3) {
-    background-image: url('/images/20180826_141403.jpg'); /* Third slide */
+    background-image: url('https://th.bing.com/th?id=OPHS.FyD6AqrkZv%2bJrQ474C474&o=5&pid=21.1&w=160&h=188&dpr=1.4'); /* Third slide */
     background-size: cover;
-    background-position: 100% 12%;
+    background-position: 100% 40%;
 }
 /*  */
-
-
-.About-us {
-    justify-content: center;
-    display : grid;
-    text-align: center;
-    background-color: #f7f4f4;
-    padding: 105px;
-    line-height: 1.8rem;
-}
-.Reset-btn {
-    background-color: #333;
-    color: #fff;
-    border-radius: 20px;
-    padding:7.5px 10px;
-    margin-top: 10px;
-    border: none;
-}
-
-.Reset-btn:hover {
-    background-color: #000000;
-    color: #fff;
-    border-radius: 20px;
-    padding:7.5px 10px;
-    margin-top: 10px;
-    border: none;
-}
-
-.Reset-btn {
-    background-color: #333;
-    color: #fff;
-    border-radius: 20px;
-    padding:7.5px 10px;
-    margin-top: 10px;
-    border: none;
-}
-
-.Reset-btn:hover {
-    background-color: #000000;
-    color: #fff;
-    border-radius: 20px;
-    padding:7.5px 10px;
-    margin-top: 10px;
-    border: none;
-}
-
-#auth-btn {
-    position: fixed;
-    top: 40px; /* Align with logout button */
-    right: 20px;
-    background: #000; /* Black background */
-    color: #fff; /* White text */
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 1000; /* Ensures it stays on top */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    transition: all 0.3s ease-in-out; /* Smooth effect */
-}
-
-/* Hover effect for better user experience */
-#auth-btn:hover {
-    background: #333; /* Dark gray on hover */
-    transform: scale(1.05); /* Slight zoom effect */
-}

@@ -1,31 +1,134 @@
-input[type=text], select {
-  width: 100%;
-  padding: 18px 10px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 20px;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-input[type=submit], input[type=button] {
-  width: 100%; 
-  padding: 18px 10px; 
-  margin: 8px 0;
-  background-color: #333;
-  color: white;
+body {
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+/* Form container styled like the photo */
+#myForm {
+  background: radial-gradient(circle at center, #444 0%, #111 100%);
+  padding: 30px 40px;
+  border-radius: 0;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#myForm input[type="text"],
+#myForm select,
+#myForm input[type="file"] {
+  background: #000;
+  border: 1px solid transparent;
+  color: #fff;
+  padding: 10px;
+  border-radius: 0;
+  font-size: 1rem;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+#myForm input[type="text"]::placeholder {
+  color: #999;
+}
+
+#myForm input[type="text"]:focus,
+#myForm select:focus,
+#myForm input[type="file"]:focus {
+  background-color: #ddd;
+}
+
+/* File input button */
+#myForm input[type="file"]::-webkit-file-upload-button {
+  background-color: #000;
   border: none;
-  border-radius: 20px;
+  padding: 8px 15px;
+  border-radius: 0;
   cursor: pointer;
-  box-sizing: border-box; 
+  color: #fff;
+  font-weight: bold;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+#myForm input[type="file"]::file-selector-button {
+  background-color: #000;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 0;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
 }
 
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 140px 150px;
+#myForm input[type="file"]::-moz-file-upload-button {
+  background-color: #000;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 0;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+#myForm input[type="button"],
+.form-btn {
+  background-color: #eee;
+  color: #111;
+  border: none;
+  border-radius: 0;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#myForm input[type="button"]:hover,
+.form-btn:hover {
+  background-color: #ddd;
+}
+
+/* Form title */
+#myForm::before {
+  content: "Add New Member";
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  display: block;
+  color: #eee;
+}
+
+/* Labels */
+#myForm label {
+  font-weight: normal;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #myForm {
+    width: 90%;
+    padding: 20px;
+  }
+  #myForm input[type="text"],
+  #myForm select,
+  #myForm input[type="file"],
+  #myForm input[type="button"],
+  .form-btn {
+    font-size: 1rem;
+    padding: 8px;
+  }
 }

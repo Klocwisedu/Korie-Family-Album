@@ -1,0 +1,51 @@
+/* Backup of original media-query.css before responsive carousel, why-section, and download-app changes */
+@media only screen and (max-width: 768px) {
+  /* Adjust sidebar menu */
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  /* Adjust carousel container */
+  .carousel-container {
+    padding: 10px;
+  }
+
+  /* Adjust carousel slide text size */
+  .carousel-slide h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-slide p {
+    font-size: 1rem;
+  }
+
+  /* Stack the why-section divs vertically */
+  .why-section {
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+
+  /* Adjust the download app section layout */
+  .download-app {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  /* Adjust footer padding */
+  footer {
+    padding: 20px;
+  }
+
+  /* Make customer section grid single column */
+  .customer-section {
+    grid-template-columns: 1fr !important;
+    padding: 20px;
+  }
+
+  /* General text size adjustments */
+  h1, h2, p {
+    font-size: 90%;
+  }
+}
